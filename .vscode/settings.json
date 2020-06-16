@@ -1,0 +1,17 @@
+{
+    "editor.tabSize": 4,
+    "files.eol": "\n",
+    "search.exclude": {
+        "**/.git": true,
+        "**/.tox": true,
+        "**/__pycache__": true
+    },
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.analysis.disabled": [E303, W504],
+
+    // python.pythonPath
+    "python.linting.flake8Path": "${workspaceRoot}/.tox/dev/Scripts/flake8.exe",
+    "python.pythonPath": "${workspaceRoot}/.tox/dev/Scripts/python.exe"
+}

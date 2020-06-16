@@ -1,0 +1,1 @@
+*/2 * * * * /data/app/instance/bin/run-watching-and-collecting >> /data/app/storage/log/cron.log

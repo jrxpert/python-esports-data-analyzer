@@ -1,0 +1,55 @@
+{
+	"datapoints": 7,
+	"provider1_id": "5",
+	"provider1_sides": ["home", "away"],
+	"provider1_missing_datapoints": 2,
+	"provider2_id": "3",
+	"provider2_slug": "csgo",
+	"provider2_missing_datapoints": 0,
+	"tournaments": {
+		"ESL Pro League 11 Europe": {
+			"provider1": {
+				"tournament_id": 4430
+			},
+			"provider2": {
+				"league_id": 4158
+			}
+		},
+		"ESL Pro League 11 North America": {
+			"provider1": {
+				"tournament_id": 4538
+			},
+			"provider2": null
+		},
+		"ESL One Road to Rio EU": {
+			"provider1": {
+				"tournament_id": 4600
+			},
+			"provider2": {
+				"league_id": 4158
+			}
+		},
+		"ESL One Road to Rio NA": {
+			"provider1": {
+				"tournament_id": 4602
+			},
+			"provider2": {
+				"league_id": 4158
+			}
+		},
+		"ESL One Road to Rio SA": {
+			"provider1": {
+				"tournament_id": 4603
+			},
+			"provider2": {
+				"league_id": 4158
+			}
+		},
+		"2020 BLAST Premier Spring": {
+			"provider1": {
+				"tournament_id": 4543
+			},
+			"provider2": null
+		}
+	}
+}

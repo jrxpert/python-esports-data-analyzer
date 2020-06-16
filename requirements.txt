@@ -1,0 +1,11 @@
+# Global packages
+cherrypy==18.0.*
+google-cloud-logging==1.10.*
+grpcio
+toolz
+
+# Optional packages
+formencode==1.3.*  # validations
+
+# Postgre SQL database
+psycopg2==2.8.*

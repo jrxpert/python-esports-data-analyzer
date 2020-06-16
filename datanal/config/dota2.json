@@ -1,0 +1,9 @@
+{
+	"datapoints": 7,
+	"provider1_id": "1",
+	"provider1_sides": ["dire_roster", "radiant_roster"],
+	"provider1_missing_datapoints": 0,
+	"provider2_id": "4",
+	"provider2_slug": "dota2",
+	"provider2_missing_datapoints": 0
+}

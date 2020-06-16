@@ -1,0 +1,9 @@
+{
+	"datapoints": 7,
+	"provider1_id": "2",
+	"provider1_sides": ["blue_roster", "purple_roster"],
+	"provider1_missing_datapoints": 0,
+	"provider2_id": "1",
+	"provider2_slug": "lol",
+	"provider2_missing_datapoints": 0
+}

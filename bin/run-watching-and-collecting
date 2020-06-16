@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+watching_flag=/data/app/storage/tmp/watching_flag.txt
+if [[ -f "$watching_flag" ]]; then
+    source /data/app/venv/bin/activate
+
+    python /data/app/instance/bin/watch-and-collect-sync.py
+fi

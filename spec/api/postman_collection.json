@@ -1,0 +1,699 @@
+{
+	"info": {
+		"_postman_id": "7eab7600-37c9-44e2-a876-1b1eca3abad2",
+		"name": "python-esport-data-analyzator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "watcher",
+			"item": [
+				{
+					"name": "get-time-limit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/get-time-limit",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"get-time-limit"
+							]
+						},
+						"description": "Get time limit value, it means how long in minutes we watching games after theirs finish."
+					},
+					"response": []
+				},
+				{
+					"name": "save-time-limit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "limit",
+									"value": "240",
+									"description": "int, minutes (default 20)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/save-time-limit",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"save-time-limit"
+							]
+						},
+						"description": "Set new time limit value, it means how long in minutes we watching games after theirs finish."
+					},
+					"response": []
+				},
+				{
+					"name": "get-tournaments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/get-tournaments?game_name=csgo",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"get-tournaments"
+							],
+							"query": [
+								{
+									"key": "game_name",
+									"value": "csgo",
+									"description": "csgo, dota2, lol"
+								}
+							]
+						},
+						"description": "Get JSON with list of tournaments for watching, they are choosen from complete list."
+					},
+					"response": []
+				},
+				{
+					"name": "save-tournaments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"game_name\": \"csgo\",\n    \"tournaments\": {\n        \"ESL Pro League 11 Europe\": {\n            \"provider1\": {\n                \"tournament_id\": 4430\n            },\n            \"provider2\": {\n                \"league_id\": 4158,\n                \"serie_id\": 2528\n            }\n        },\n        \"ESL Pro League 11 North America\": {\n            \"provider1\": {\n                \"tournament_id\": 4538\n            },\n            \"provider2\": null\n        },\n        \"2020 BLAST Premier Spring\": {\n            \"provider1\": {\n                \"tournament_id\": 4543\n            },\n            \"provider2\": null\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/save-tournaments",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"save-tournaments"
+							]
+						},
+						"description": "Set new list of tournaments for watching from JSON, choose them from complete list."
+					},
+					"response": [
+						{
+							"name": "save-tournaments - DOTA2 default",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"game_name\": \"dota2\",\n    \"tournaments\": {\n        \"ESL One Los Angeles 2020\": {\n            \"provider1\": {\n                \"tournament_id\": 4356\n            },\n            \"provider2\": {\n                \"league_id\": 4114,\n                \"serie_id\": [\n                    2424,\n                    2562,\n                    2563,\n                    2564,\n                    2565,\n                    2566\n                ]\n            }\n        }\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/save-tournaments",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"save-tournaments"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "save-tournaments - LOL default",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"game_name\": \"csgo\",\n    \"tournaments\": {\n        \"2020 League of Legends Championship Series Spring\": {\n            \"provider1\": {\n                \"tournament_id\": 4245\n            },\n            \"provider2\": {\n                \"league_id\": 4198,\n                \"serie_id\": 2347\n            }\n        },\n        \"2020 League of Legends Championship Series Summer\": {\n            \"provider1\": {\n                \"tournament_id\": 4529\n            },\n            \"provider2\": {\n                \"league_id\": 4198,\n                \"serie_id\": 1795\n            }\n        },\n        \"2020 League of Legends European Championship Spring\": {\n            \"provider1\": {\n                \"tournament_id\": 4244\n            },\n            \"provider2\": {\n                \"league_id\": 4197,\n                \"serie_id\": 2348\n            }\n        },\n        \"2020 League of Legends European Championship Summer\": {\n            \"provider1\": {\n                \"tournament_id\": 4528\n            },\n            \"provider2\": {\n                \"league_id\": 4197,\n                \"serie_id\": 1805\n            }\n        },\n        \"2020 League of Legends Champions Korea Spring\": {\n            \"provider1\": {\n                \"tournament_id\": 4334\n            },\n            \"provider2\": {\n                \"league_id\": 293,\n                \"serie_id\": 1837\n            }\n        },\n        \"2020 League of Legends Pro League Spring\": {\n            \"provider1\": {\n                \"tournament_id\": null\n            },\n            \"provider2\": {\n                \"league_id\": 294,\n                \"serie_id\": 2365\n            }\n        },\n        \"2020 League of Legends Pro League Summer\": {\n            \"provider1\": {\n                \"tournament_id\": null\n            },\n            \"provider2\": {\n                \"league_id\": 294,\n                \"serie_id\": 2516\n            }\n        },\n        \"2020 Pacific Championship Series Spring\": {\n            \"provider1\": {\n                \"tournament_id\": null\n            },\n            \"provider2\": {\n                \"league_id\": 4288,\n                \"serie_id\": 2364\n            }\n        },\n        \"2020 Vietnam Championship Series Spring\": {\n            \"provider1\": {\n                \"tournament_id\": null\n            },\n            \"provider2\": {\n                \"league_id\": 4141,\n                \"serie_id\": 1842\n            }\n        },\n        \"2020 League of Legends Continental League Cup Spring\": {\n            \"provider1\": {\n                \"tournament_id\": null\n            },\n            \"provider2\": {\n                \"league_id\": 4004,\n                \"serie_id\": 2498\n            }\n        },\n        \"2020 League of Legends Continental League Spring\": {\n            \"provider1\": {\n                \"tournament_id\": null\n            },\n            \"provider2\": {\n                \"league_id\": 4004,\n                \"serie_id\": 1845\n            }\n        },\n        \"2020 Turkish Championship League Winter\": {\n            \"provider1\": {\n                \"tournament_id\": null\n            },\n            \"provider2\": {\n                \"league_id\": 1003,\n                \"serie_id\": 2369\n            }\n        },\n        \"2020 Campeonato Brasileiro de League of Legends Split 1\": {\n            \"provider1\": {\n                \"tournament_id\": null\n            },\n            \"provider2\": {\n                \"league_id\": 302,\n                \"serie_id\": 1838\n            }\n        },\n        \"2020 Liga Latinoamérica Opening\": {\n            \"provider1\": {\n                \"tournament_id\": null\n            },\n            \"provider2\": {\n                \"league_id\": 4199,\n                \"serie_id\": 2368\n            }\n        },\n        \"2020 League of Legends Japan League Spring\": {\n            \"provider1\": {\n                \"tournament_id\": null\n            },\n            \"provider2\": {\n                \"league_id\": 2092,\n                \"serie_id\": 1843\n            }\n        },\n        \"2020 Oceanic Pro League Split 1\": {\n            \"provider1\": {\n                \"tournament_id\": null\n            },\n            \"provider2\": {\n                \"league_id\": 301,\n                \"serie_id\": 1841\n            }\n        }\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/save-tournaments",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"save-tournaments"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "save-tournaments - CS:GO default",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"game_name\": \"csgo\",\n    \"tournaments\": {\n        \"ESL Pro League 11 Europe\": {\n            \"provider1\": {\n                \"tournament_id\": 4430\n            },\n            \"provider2\": {\n                \"league_id\": 4158,\n                \"serie_id\": 2528\n            }\n        },\n        \"ESL Pro League 11 North America\": {\n            \"provider1\": {\n                \"tournament_id\": 4538\n            },\n            \"provider2\": null\n        },\n        \"2020 BLAST Premier Spring\": {\n            \"provider1\": {\n                \"tournament_id\": 4543\n            },\n            \"provider2\": null\n        }\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/save-tournaments",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"save-tournaments"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "start-watching",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/start-watching",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"start-watching"
+							]
+						},
+						"description": "Start automatic watching of finished games data. (CRON is running this)"
+					},
+					"response": []
+				},
+				{
+					"name": "finish-watching",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/finish-watching",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"finish-watching"
+							],
+							"query": [
+								{
+									"key": "log",
+									"value": "true",
+									"description": "optional (boolean), force logging",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Finish automatic watching of finished games data. (CRON is running this)"
+					},
+					"response": []
+				},
+				{
+					"name": "watch-current-games",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/watch-current-games?data_src=provider1&game_name=lol",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"watch-current-games"
+							],
+							"query": [
+								{
+									"key": "data_src",
+									"value": "provider1",
+									"description": "provider1,provider2"
+								},
+								{
+									"key": "game_name",
+									"value": "lol",
+									"description": "csgo,dota2,lol"
+								},
+								{
+									"key": "log",
+									"value": "true",
+									"description": "optional (boolean), force logging",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Find specified games (from JSON with tournament ids) finished in limit (20 minutes) and save them for watching data corrections."
+					},
+					"response": []
+				},
+				{
+					"name": "collect-current-data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/collect-current-data?data_src=provider1&game_name=lol",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"collect-current-data"
+							],
+							"query": [
+								{
+									"key": "data_src",
+									"value": "provider1",
+									"description": "provider1,provider2"
+								},
+								{
+									"key": "game_name",
+									"value": "lol",
+									"description": "csgo,dota2,lol"
+								},
+								{
+									"key": "log",
+									"value": "true",
+									"description": "optional (boolean), force logging",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Collect data for saved games to watch, compare them with last data and save them and if they are different."
+					},
+					"response": []
+				},
+				{
+					"name": "analyze-current-data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/analyze-current-data?data_src=provider1&game_name=dota2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"analyze-current-data"
+							],
+							"query": [
+								{
+									"key": "data_src",
+									"value": "provider1",
+									"description": "provider1,provider2"
+								},
+								{
+									"key": "game_name",
+									"value": "dota2",
+									"description": "csgo,dota2,lol"
+								},
+								{
+									"key": "data_src_tournament_id",
+									"value": "4158",
+									"description": "optional (int), specify torunament to analyze",
+									"disabled": true
+								},
+								{
+									"key": "log",
+									"value": "true",
+									"description": "optional (boolean), force logging",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Analyze data collected from games to watch and return their analysis. Source tournament id can be specified for analysis targetting."
+					},
+					"response": []
+				},
+				{
+					"name": "download-current-data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/download-current-data?output=sql",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"download-current-data"
+							],
+							"query": [
+								{
+									"key": "output",
+									"value": "sql",
+									"description": "csv, sql"
+								},
+								{
+									"key": "log",
+									"value": "true",
+									"description": "optional (boolean), force logging",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Download collected data. CSV type returns you ZIP package with CSV datafiles for each database table. Could be imported with \"COPY FROM ...\" Postgre SQL query. SQL type returns you database dump."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "grabber",
+			"item": [
+				{
+					"name": "grab-past-data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/grab-past-data?data_src=provider1&game_name=csgo&date_from=2020-01-01&date_to=2020-03-31",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"grab-past-data"
+							],
+							"query": [
+								{
+									"key": "data_src",
+									"value": "provider1",
+									"description": "provider1,provider2"
+								},
+								{
+									"key": "game_name",
+									"value": "csgo",
+									"description": "csgo,dota2,lol"
+								},
+								{
+									"key": "date_from",
+									"value": "2020-01-01",
+									"description": "optional (date, Y-m-d)"
+								},
+								{
+									"key": "date_to",
+									"value": "2020-03-31",
+									"description": "optional (date, Y-m-d)"
+								},
+								{
+									"key": "delete_old",
+									"value": "true",
+									"description": "boolean, it deletes all collected data from specified data source before it collects new data",
+									"disabled": true
+								},
+								{
+									"key": "log",
+									"value": "true",
+									"description": "optional (boolean), force logging",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Find specified games (from JSON with tournament ids) in date range, collect data for them and analyze, returns analysis."
+					},
+					"response": []
+				},
+				{
+					"name": "download-past-data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/download-past-data?output=csv",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"download-past-data"
+							],
+							"query": [
+								{
+									"key": "output",
+									"value": "csv",
+									"description": "csv, sql"
+								},
+								{
+									"key": "log",
+									"value": "true",
+									"description": "optional (boolean), force logging",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Download collected data. CSV type returns you ZIP package with CSV datafiles for each database table. Could be imported with \"COPY FROM ...\" Postgre SQL query. SQL type returns you database dump."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "sys",
+			"item": [
+				{
+					"name": "ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/ping",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"ping"
+							]
+						},
+						"description": "Ping should return \"pong\" if application is running."
+					},
+					"response": []
+				},
+				{
+					"name": "monitor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/monitor?data_src=provider1",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"monitor"
+							],
+							"query": [
+								{
+									"key": "data_src",
+									"value": "provider1",
+									"description": "provider1,provider2"
+								},
+								{
+									"key": "log",
+									"value": "true",
+									"description": "optional (boolean), force logging",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Monitor try authentication for specified data source and return its request time in miliseconds."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "password",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "datanal",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3bdccf14-a49d-437b-aa4a-52f325c0826a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c3d129ee-d443-405c-9cb9-5c332c5d633b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

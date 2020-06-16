@@ -1,0 +1,130 @@
+{
+	"2020 League of Legends Championship Series Spring": {
+		"provider1": {
+			"tournament_id": 4245
+		},
+		"provider2": {
+			"league_id": 4198
+		}
+	},
+	"2020 League of Legends Championship Series Summer": {
+		"provider1": {
+			"tournament_id": 4529
+		},
+		"provider2": {
+			"league_id": 4198
+		}
+	},
+	"2020 League of Legends European Championship Spring": {
+		"provider1": {
+			"tournament_id": 4597
+		},
+		"provider2": {
+			"league_id": 4197
+		}
+	},
+	"2020 League of Legends European Championship Summer": {
+		"provider1": {
+			"tournament_id": 4528
+		},
+		"provider2": {
+			"league_id": 4197
+		}
+	},
+	"2020 League of Legends Champions Korea Spring": {
+		"provider1": {
+			"tournament_id": 4334
+		},
+		"provider2": {
+			"league_id": 293
+		}
+	},
+	"2020 League of Legends Pro League Spring": {
+		"provider1": {
+			"tournament_id": 4330
+		},
+		"provider2": {
+			"league_id": 294
+		}
+	},
+	"2020 League of Legends Pro League Summer": {
+		"provider1": {
+			"tournament_id": null
+		},
+		"provider2": {
+			"league_id": 294
+		}
+	},
+	"2020 Pacific Championship Series Spring": {
+		"provider1": {
+			"tournament_id": 4318
+		},
+		"provider2": {
+			"league_id": 4288
+		}
+	},
+	"2020 Vietnam Championship Series Spring": {
+		"provider1": {
+			"tournament_id": null
+		},
+		"provider2": {
+			"league_id": 4141
+		}
+	},
+	"2020 League of Legends Continental League Cup Spring": {
+		"provider1": {
+			"tournament_id": 4338
+		},
+		"provider2": {
+			"league_id": 4004
+		}
+	},
+	"2020 League of Legends Continental League Spring": {
+		"provider1": {
+			"tournament_id": null
+		},
+		"provider2": {
+			"league_id": 4004
+		}
+	},
+	"2020 Turkish Championship League Winter": {
+		"provider1": {
+			"tournament_id": 4310
+		},
+		"provider2": {
+			"league_id": 1003
+		}
+	},
+	"2020 Campeonato Brasileiro de League of Legends Split 1": {
+		"provider1": {
+			"tournament_id": 4335
+		},
+		"provider2": {
+			"league_id": 302
+		}
+	},
+	"2020 Liga Latinoamérica Opening": {
+		"provider1": {
+			"tournament_id": 4380
+		},
+		"provider2": {
+			"league_id": 4199
+		}
+	},
+	"2020 League of Legends Japan League Spring": {
+		"provider1": {
+			"tournament_id": 4336
+		},
+		"provider2": {
+			"league_id": 2092
+		}
+	},
+	"2020 Oceanic Pro League Split 1": {
+		"provider1": {
+			"tournament_id": 4317
+		},
+		"provider2": {
+			"league_id": 301
+		}
+	}
+}

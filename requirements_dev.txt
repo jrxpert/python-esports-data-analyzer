@@ -1,0 +1,22 @@
+# Development
+# These packages are necessary for development.
+# Note that packages from requirements.txt are required to run the app.
+
+pytest>=3.7
+flake8>=3.5
+pylint
+invoke
+
+# For build
+wheel
+setuptools
+
+# Coverage
+coverage
+pytest-cov
+
+# Docs
+# guzzle_sphinx_theme
+
+# Usefull for Windows
+# win_unicode_console

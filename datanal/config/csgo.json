@@ -1,0 +1,9 @@
+{
+	"datapoints": 7,
+	"provider1_id": "5",
+	"provider1_sides": ["home", "away"],
+	"provider1_missing_datapoints": 0,
+	"provider2_id": "3",
+	"provider2_slug": "csgo",
+	"provider2_missing_datapoints": 0
+}

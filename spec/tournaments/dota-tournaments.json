@@ -1,0 +1,27 @@
+{
+	"datapoints": 7,
+	"provider1_id": "1",
+	"provider1_sides": ["dire", "radiant"],
+	"provider1_missing_datapoints": 2,
+	"provider2_id": "4",
+	"provider2_slug": "dota2",
+	"provider2_missing_datapoints": 1,
+	"tournaments": {
+		"ESL One Los Angeles 2020": {
+			"provider1": {
+				"tournament_id": 4356
+			},
+			"provider2": {
+				"league_id": 4114,
+				"serie_id": [
+					2424,
+					2562,
+					2563,
+					2564,
+					2565,
+					2566
+				]
+			}
+		}
+	}
+}
